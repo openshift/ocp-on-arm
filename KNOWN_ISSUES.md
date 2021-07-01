@@ -12,3 +12,10 @@
 
   **Workaround:** `openshift-tests run openshift/conformance/parallel --from-repository quay.io/multi-arch/community-e2e-images`
 
+## Recommendation to change network provider before installation
+
+  **Description:** The intended default network provider for a future release of OpenShift on ARM is OVN-Kubernetes, however, the installer currently defaults to OpenShift SDN.
+  
+  **Workaround:** It is recommended that you set `network.networkType` in the `install-config.yaml` to `OVNKubernetes` before creating your cluster.
+  A cluster created with the default value of `OpenShiftSDN` will still be operational.  Migrating an existing cluster has not been tested on ARM.
+
