@@ -1,10 +1,10 @@
 # Known issues in the OpenShift on ARM developer preview
 
-## [openshift-marketplace pods are in a non-ready state](https://github.com/openshift/ocp-on-arm/issues/1)
+## [No OperatorHub items found](https://github.com/openshift/ocp-on-arm/issues/1)
 
-  **Description:** When starting a cluster on ARM, warnings are generated that various `openshift-marketplace` pods are in a non-ready state.
+  **Description:** At this point, the default `CatalogSource`s used by OperatorHub still point to 4.8 indexes which do not include ARM, and 4.9 operators have yet to be made publicly available.
 
-  **Workaround:** `oc patch operatorhub.config.openshift.io/cluster -p='{"spec":{"disableAllDefaultSources":true}}' --type=merge`
+  **Workaround:** None at this time.
 
 ## [Various conformance tests may fail due to missing images on ARM](https://github.com/openshift/ocp-on-arm/issues/6)
 
