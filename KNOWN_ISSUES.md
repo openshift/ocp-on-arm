@@ -6,6 +6,19 @@
 
   **Workaround:** None at this time.
 
+## [Cluster Utilization item Network transfer shows 'No datapoints found'](https://github.com/openshift/ocp-on-arm/issues/11)
+
+  **Description:** In the Cluster Utilization card in the Home->Overview page of the Administrator web console, the Network transfer section reports 'No datapoints found'.
+  
+  **Workaround:** Use the Networking dashboards on the Monitoring->Dashboards page.
+
+## [ImageStream, ImageStreamTag, and Template selection is limited on ARM](https://github.com/openshift/ocp-on-arm/issues/10)
+
+  **Description:** Fewer `ImageStream`s, `ImageStreamTag`s, and `Template`s are available on ARM, based on the availability of the underlying container images.
+  In particular, anything dependent on RHEL 7 or UBI 7 is not available on ARM.
+  
+  **Workaround:** Update templates to use only `-ubi8` or `-el8` suffixed `ImageStreamTag`s.
+
 ## [Various conformance tests may fail due to missing images on ARM](https://github.com/openshift/ocp-on-arm/issues/6)
 
   **Description:** A number of conformance tests will fail due to being unable to pull the images used by the tests.
