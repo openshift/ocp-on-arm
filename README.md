@@ -5,6 +5,8 @@ OpenShift on ARM Developer Preview
 
 This repository provides installation instructions and an issue tracker for the developer preview release of OpenShift on ARM.
 
+Please note that this developer preview is based on a nightly build of OpenShift 4.9, and therefore is neither feature nor bug complete.
+
 
 Getting Started
 ---------------
