@@ -9,7 +9,7 @@ This repository provides installation instructions and an issue tracker for the 
 Getting Started
 ---------------
 
-To obtain the openshift installer and client, visit [https://mirror.openshift.com/pub/openshift-v4/aarch64/clients/ocp-dev-preview/pre-release/](https://mirror.openshift.com/pub/openshift-v4/aarch64/clients/ocp-dev-preview/pre-release/) for nightlies. Please note that nightly releases may be pruned over time. If the nightly that you installed was pruned, the cluster may be unable to pull necessary images and may show errors for various functionality (including updates).
+To obtain the openshift installer and client, visit [cloud.redhat.com](https://cloud.redhat.com/openshift/install/aws/arm).  Please note that the Linux binaries on that page are for x86_64; if you need Linux ARM binaries, they are available at [mirror.openshift.com](https://mirror.openshift.com/pub/openshift-v4/aarch64/clients/ocp-dev-preview/pre-release/).
 
 Extract the downloaded tarballs and copy the binaries into your PATH. Then run the following from an empty directory:
 
@@ -21,7 +21,9 @@ You'll be prompted to choose a platform to install to - AWS is the only availabl
 
 You will need to have cloud credentials set in your shell properly before installation.  The account setup steps for AWS are identical to an x86_64 install, and are described in [the installer documentation](https://github.com/openshift/installer/tree/master/docs/user/aws#readme).
 
-You will also be prompted for a pull-secret that will be made available to all of of your machines - get this from [cloud.redhat.com](https://cloud.redhat.com/openshift/install/pre-release).
+When selecting a region, note that ARM instances are available in [most, but not all, AWS regions](https://aws.amazon.com/about-aws/whats-new/2021/02/aws-graviton2-m6g-c6g-r6g-instances-available-additional-regions/).
+
+You will also be prompted for a pull-secret that will be made available to all of of your machines - get this from [cloud.redhat.com](https://cloud.redhat.com/openshift/install/aws/arm).
 
 This will create an install-config.yaml file which defines the installation.  Please verify that both `architecture` values are set to `arm64`.  Also, it is recommended to change `network.networkType` to `OVNKubernetes`, but the default value of `OpenShiftSDN` will still work.
 
@@ -42,6 +44,8 @@ $ openshift-install destroy cluster
 [Learn more about the installer](https://github.com/openshift/installer/blob/master/docs/user/overview.md)
 
 The OpenShift client tools for your cluster can be downloaded from the web console.
+
+Please note that pre-releases may be pruned over time. If the pre-release that you installed was pruned, the cluster may be unable to pull necessary images and may show errors for various functionality (including updates). In that case, you will need to redeploy with a new pre-release.
 
 
 Contributing
