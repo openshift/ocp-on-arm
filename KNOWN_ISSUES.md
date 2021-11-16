@@ -2,15 +2,10 @@
 
 ## [No OperatorHub items found](https://github.com/openshift/ocp-on-arm/issues/1)
 
-  **Description:** At this point, the default `CatalogSource`s used by OperatorHub still point to 4.8 indexes which do not include ARM, and 4.9 operators have yet to be made publicly available.
+  **Description:** The default `CatalogSource`s used by OperatorHub are not installed by default on ARM.
 
-  **Workaround:** None at this time.
-
-## [Cluster Utilization item Network transfer shows 'No datapoints found'](https://github.com/openshift/ocp-on-arm/issues/11)
-
-  **Description:** In the Cluster Utilization card in the Home->Overview page of the Administrator web console, the Network transfer section reports 'No datapoints found'.
-  
-  **Workaround:** Use the Networking dashboards on the Monitoring->Dashboards page.
+  **Workaround:** Install the index images manually, as described in [this update to the issue](https://github.com/openshift/ocp-on-arm/issues/1#issuecomment-970450106).
+  Please note that only a limited selection of operators are currently available on ARM.
 
 ## [ImageStream, ImageStreamTag, and Template selection is limited on ARM](https://github.com/openshift/ocp-on-arm/issues/10)
 
