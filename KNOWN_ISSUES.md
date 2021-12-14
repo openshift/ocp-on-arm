@@ -4,8 +4,7 @@
 
   **Description:** The default `CatalogSource`s used by OperatorHub are not installed by default on ARM.
 
-  **Workaround:** Install the index images manually, as described in [this update to the issue](https://github.com/openshift/ocp-on-arm/issues/1#issuecomment-970450106).
-  Please note that only a limited selection of operators are currently available on ARM.
+  **Workaround:** Update the cluster to at least 4.9.10.
 
 ## [ImageStream, ImageStreamTag, and Template selection is limited on ARM](https://github.com/openshift/ocp-on-arm/issues/10)
 
