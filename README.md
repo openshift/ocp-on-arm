@@ -1,17 +1,15 @@
-OpenShift on ARM Developer Preview
-==================================
+OpenShift on ARM
+================
 
 ***OpenShift*** is Red Hat's distribution of [Kubernetes](https://kubernetes.io) optimized for continuous application development and multi-tenant deployment. OpenShift adds developer and operations-centric tools on top of Kubernetes to enable rapid application development, easy deployment and scaling, and long-term lifecycle maintenance for small and large teams.
 
-This repository provides installation instructions and an issue tracker for the developer preview release of OpenShift on ARM.
-
-Please note that this developer preview is based on a nightly build of OpenShift 4.9, and therefore is neither feature nor bug complete.
+OpenShift on ARM is now Generally Available.  As such, this repository is no longer in use, and the information stored herein is mostly historical.
 
 
 Getting Started
 ---------------
 
-To obtain the openshift installer and client, visit [console.redhat.com](https://console.redhat.com/openshift/install/aws/arm). Direct downloads are also available at [mirror.openshift.com](https://mirror.openshift.com/pub/openshift-v4/aarch64/clients/ocp-dev-preview/pre-release/).
+To obtain the openshift installer and client, visit [console.redhat.com](https://console.redhat.com/openshift/install/aws/arm). Direct downloads are also available at [mirror.openshift.com](https://mirror.openshift.com/pub/openshift-v4/aarch64/clients/ocp/stable/).
 
 Extract the downloaded tarballs and copy the binaries into your PATH. Then run the following from an empty directory:
 
@@ -55,8 +53,6 @@ Contributing
 
 OpenShift is built from many different open source projects - Red Hat CoreOS, the UBI RPM ecosystems, cri-o, Kubernetes, and many different extensions to Kubernetes. The `openshift` organization on GitHub holds active development of components on top of Kubernetes and references projects built elsewhere. Generally, you'll want to find the component that interests you and review their README.md for the processes for contributing.
 
-Issues with OpenShift on ARM can be [opened in this repository](https://github.com/openshift/ocp-on-arm/issues).
-
 Our unified continuous integration system tests pull requests to the ecosystem and core images, then builds and promotes them after merge. To see the latest development releases of OpenShift on ARM, visit [our continuous release page](https://arm64.ocp.releases.ci.openshift.org/). These releases are built continuously and expire after a few days.
 
 All contributions are welcome - OpenShift uses the Apache 2 license and does not require any contributor agreement to submit patches.  Please open issues for any bugs or problems you encounter, or get involved in the [Kubernetes project](https://github.com/kubernetes/kubernetes) at the container runtime layer.
@@ -67,12 +63,6 @@ Security Response
 If you've found a security issue that you'd like to disclose confidentially
 please contact Red Hat's Product Security team. Details at
 https://access.redhat.com/security/team/contact
-
-
-Known Issues
-------------
-Known issues and possible workarounds are documented on this page:
-[Known Issues](./KNOWN_ISSUES.md)
 
 
 License
